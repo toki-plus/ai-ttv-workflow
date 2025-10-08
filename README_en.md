@@ -132,7 +132,7 @@ The application's top-to-bottom layout represents the recommended workflow.
 
 Hi, I'm Toki, the author of this project.
 
-> **Ex-Big4 (KPMG) Security Consultant | Python Automation Solutions Expert**
+> **Ex-Big4 (KPMG) Cybersecurity Consultant | Python Automation Solutions Expert**
 
 I specialize in creating custom tools that boost efficiency and cut costs for content creators and cross-border e-commerce businesses. My experience at KPMG, serving top-tier clients in finance and consumer goods (such as BlackRock, Marriott, LVMH, and Shell), has equipped me to transform complex business requirements into stable and effective automation solutions.
 
@@ -195,6 +195,7 @@ If you find this project helpful, please consider giving it a ⭐!
 
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
 
 
 
