@@ -1,0 +1,6 @@
+PyQt5
+requests
+pysrt
+edge-tts
+Pillow
+selenium
