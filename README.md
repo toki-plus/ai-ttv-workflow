@@ -141,10 +141,26 @@
 **欢迎与我联系，让我们一起打造能为你创造价值的工具！**
 
 <p align="center">
-  <strong>业务定制，请添加微信：</strong><br>
-  <img src="./assets/images/wechat.png" alt="微信二维码" width="200"/>
-  <br>微信号: toki-plus (请备注“GitHub工具定制”)
+  <strong>业务定制与技术交流，请添加：</strong>
 </p>
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="./assets/images/wechat.png" alt="微信二维码" width="200"/>
+      <br />
+      <sub><b>个人微信</b></sub>
+      <br />
+      <sub>微信号: toki-plus (请备注“GitHub工具定制”)</sub>
+    </td>
+    <td align="center">
+      <img src="./assets/images/gzh" alt="公众号二维码" width="200"/>
+      <br />
+      <sub><b>公众号</b></sub>
+      <br />
+      <sub>获取最新技术分享与项目更新</sub>
+    </td>
+  </tr>
+</table>
 
 ## 📂 我的其他开源项目
 
@@ -163,4 +179,5 @@
 
 
 本项目基于 MIT 协议开源。详情请见 [LICENSE](LICENSE) 文件。
+
 
