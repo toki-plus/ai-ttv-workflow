@@ -2,7 +2,6 @@ import os
 
 class Config:
     APP_NAME = "颜趣AI视频创作工作流"
-    APP_VERSION = "1.11.0"
 
     PACKAGE_DIR = os.path.dirname(os.path.abspath(__file__))
     PROJECT_ROOT = os.path.dirname(PACKAGE_DIR)
@@ -245,4 +244,5 @@ class Config:
         color: #FFFFFF;
         background-color: transparent;
     }
+
     """
