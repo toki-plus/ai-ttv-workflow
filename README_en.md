@@ -164,8 +164,8 @@ My services include, but are not limited to:
 
 ## 📂 My Other Open-Source Projects
 
--   **[Video Mover](https://github.com/toki-plus/video-mover)**: A powerful and fully automated content creation pipeline tool. It can automatically monitor and download videos posted by designated creators, perform in-depth and multi-dimensional video deduplication processing, generate viral-worthy titles using large AI models, and finally publish them automatically to various platforms.
--   **[AB Video Deduplicator](https://github.com/toki-plus/AB-Video-Deduplicator)**: AB Video Deduplication Tool is an open-source desktop application designed specifically for video creators. It fundamentally reconstructs video data fingerprints through the innovative "high-frame-rate frame extraction and mixing" technology, thereby evading originality detection and plagiarism checks on major short-video platforms such as Douyin and TikTok. Built on Python, PyQt5, and FFmpeg, this project offers an intuitive graphical user interface (GUI) and NVIDIA GPU acceleration options, aiming to provide an efficient and reliable technical solution for secondary content creation and distribution.
+-   **[Video Mover](https://github.com/toki-plus/video-mover)**: A powerful, fully automated pipeline that monitors creators, downloads their new videos, performs deep deduplication, generates AI-powered titles, and auto-publishes to different platforms.
+-   **[AB Video Deduplicator](https://github.com/toki-plus/AB-Video-Deduplicator)**: Fundamentally alters a video's data fingerprint using an innovative "high-frame-rate blending" technique to bypass originality checks on major short-video platforms.
 
 ## 🤝 Contributing
 
@@ -179,6 +179,7 @@ If you find this project helpful, please consider giving it a ⭐!
 
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
 
 
 
