@@ -43,7 +43,7 @@ This is more than just a video editor; it's a complete, intelligent workflow:
     -   **Professional Cover Art**: Automatically generates a 9:16 vertical cover image suitable for short-form video platforms.
     -   **🚀 GPU Acceleration**: Supports NVIDIA (NVENC) hardware acceleration to dramatically reduce video rendering times.
 
--   ** GUI & User Experience**:
+-   **GUI & User Experience**:
     -   **Cross-Platform Interface**: Built with PyQt5, offering a clean and intuitive user experience on Windows, macOS, and Linux.
     -   **Automatic Driver Management**: On the first use of AI features, the application automatically downloads the correct `chromedriver` to match your version of Chrome, eliminating manual setup.
 
@@ -163,3 +163,4 @@ If you find this project helpful, please consider giving it a ⭐!
 
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
