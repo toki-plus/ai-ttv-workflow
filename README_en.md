@@ -141,10 +141,26 @@ My services include, but are not limited to:
 **Feel free to reach out to discuss how we can build a valuable tool for you!**
 
 <p align="center">
-  <strong>For custom development, please add me on WeChat:</strong><br>
-  <img src="./assets/images/wechat.png" alt="WeChat QR Code" width="200"/>
-  <br>WeChat ID: toki-plus (Please note "GitHub Tool Customization")
+  <strong>For custom development or technical inquiries, please connect via:</strong>
 </p>
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="./assets/images/wechat.png" alt="WeChat QR Code" width="200"/>
+      <br />
+      <sub><b>WeChat</b></sub>
+      <br />
+      <sub>ID: toki-plus (Note: "GitHub Tool Customization")</sub>
+    </td>
+    <td align="center">
+      <img src="./assets/images/gzh.png" alt="Public Account QR Code" width="200"/>
+      <br />
+      <sub><b>Public Account</b></sub>
+      <br />
+      <sub>Scan for tech articles & project updates</sub>
+    </td>
+  </tr>
+</table>
 
 ## 📂 My Other Open-Source Projects
 
@@ -163,4 +179,5 @@ If you find this project helpful, please consider giving it a ⭐!
 
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
 
