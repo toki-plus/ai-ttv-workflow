@@ -52,7 +52,7 @@ class VideoWorkflowApp(QMainWindow):
         self.controller.start_app()
 
     def _init_window(self):
-        self.setWindowTitle(f"{Config.APP_NAME} v{Config.APP_VERSION}")
+        self.setWindowTitle(f"{Config.APP_NAME}")
         self.setGeometry(500, 250, 950, 900)
 
     def _ensure_assets_dirs(self):
@@ -602,4 +602,5 @@ class VideoWorkflowApp(QMainWindow):
         self._save_config()
         self.controller.stop_app()
         self.player.stop()
+
         super().closeEvent(event)
