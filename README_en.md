@@ -50,7 +50,7 @@ This is more than just a video editor; it's a complete, intelligent workflow:
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="./assets/images/cover_tool.png" alt="Main UI" width="800"/>
+  <img src="./assets/images/cover_software.png" alt="Main UI" width="800"/>
   <br>
   <em>The main interface, where every step of the workflow is clearly laid out.</em>
 </p>
@@ -160,5 +160,6 @@ Contributions of any kind are welcome! If you have ideas for new features, have 
 If you find this project helpful, please consider giving it a ⭐!
 
 ## 📜 License
+
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
