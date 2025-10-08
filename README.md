@@ -165,7 +165,7 @@
 ## 📂 我的其他开源项目
 
 -   **[Video Mover](https://github.com/toki-plus/video-mover)**: 一个强大的、全自动化的内容创作流水线工具。它可以自动监听、下载指定的博主发布的视频，进行深度、多维度的视频去重处理，并利用AI大模型生成爆款标题，最终自动发布到不同平台。
--   **[AB 视频去重工具](https://github.com/toki-plus/AB-Video-Deduplicator)**: AB视频去重工具 是一款专为视频创作者设计的开源桌面应用，它通过创新的“高帧率抽帧混合”技术，从根本上重构视频数据指纹，以规避抖音、TikTok等主流短视频平台的原创度检测和查重机制。本项目基于 Python, PyQt5 和 FFmpeg 构建，提供直观的图形用户界面和NVIDIA GPU加速选项，旨在为二次创作和内容分发提供一个高效、可靠的技术解决方案。
+-   **[AB 视频去重工具](https://github.com/toki-plus/AB-Video-Deduplicator)**: 通过创新的“高帧率抽帧混合”技术，从根本上重构视频数据指纹，以规避主流短视频平台的原创度检测和查重机制。
 
 ## 🤝 参与贡献
 
@@ -179,6 +179,7 @@
 
 
 本项目基于 MIT 协议开源。详情请见 [LICENSE](LICENSE) 文件。
+
 
 
 
