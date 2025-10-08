@@ -50,7 +50,7 @@
 ## 📸 软件截图
 
 <p align="center">
-  <img src="./assets/images/cover_tool.png" alt="软件主界面" width="800"/>
+  <img src="./assets/images/cover_software.png" alt="软件主界面" width="800"/>
   <br>
   <em>软件主界面，所有工作流步骤一目了然。</em>
 </p>
@@ -160,5 +160,6 @@
 如果这个项目对你有帮助，请不吝点亮一颗 ⭐！
 
 ## 📜 开源协议
+
 
 本项目基于 MIT 协议开源。详情请见 [LICENSE](LICENSE) 文件。
