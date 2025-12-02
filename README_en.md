@@ -128,36 +128,10 @@ The application's top-to-bottom layout represents the recommended workflow.
     -   If you have a supported NVIDIA GPU, check "Enable GPU Acceleration".
     -   Click **"生成视频" (Generate Video)**! After a short wait, your final `.mp4` video and cover image will be ready in your output directory.
 
-## 👨‍💻 About the Author
-
-Hi, I'm Toki, the author of this project.
-
-> **Ex-Big4 (KPMG) Cybersecurity Consultant | Python Automation Solutions Expert**
-
-I specialize in creating custom tools that boost efficiency and cut costs for content creators and cross-border e-commerce businesses. My experience at KPMG, serving top-tier clients in finance and consumer goods (such as BlackRock, Marriott, LVMH, and Shell), has equipped me to transform complex business requirements into stable and effective automation solutions.
-
-This open-source project is a showcase of my technical capabilities. If you require professional-grade services, I offer:
-
-| Service Type | Description | Best For |
-| :--- | :--- | :--- |
-| **🛠️ Custom Tool Development** | Building bespoke desktop GUI tools or automation scripts tailored to your unique business workflow. | Individuals or businesses with specific pain points and clear requirements. |
-| **💡 Technical Consulting** | One-on-one sessions to help you define technical needs, plan automation strategies, and assess project feasibility. | Decision-makers with an idea but in need of technical guidance. |
-| **📈 Project Fork & Customization** | Adding or modifying features on top of my open-source projects to quickly meet your needs. | Users who like my projects but require personalized functionalities. |
-
-## 💼 Seeking Custom Automation Solutions?
-
-This open-source project serves as a demonstration of my capabilities in desktop automation and content creation tools. If you find this project useful and are looking for a more tailored solution for your business needs, I offer paid custom development services.
-
-My services include, but are not limited to:
--   **Integration with Different Platforms**: Automation for YouTube, Bilibili, Instagram, Twitter, etc.
--   **Feature Expansion**: Adding more advanced functionalities to the existing workflow.
--   **New Tool Development**: Building custom automation tools from scratch based on your requirements.
--   **Cloud Deployment & API Development**: Deploying workflows on a server for 24/7 autonomous operation.
-
-**Feel free to reach out to discuss how we can build a valuable tool for you!**
+---
 
 <p align="center">
-  <strong>For custom development or technical inquiries, please connect via:</strong>
+  <strong>For technical inquiries, please connect via:</strong>
 </p>
 <table align="center">
   <tr>
@@ -166,7 +140,7 @@ My services include, but are not limited to:
       <br />
       <sub><b>WeChat</b></sub>
       <br />
-      <sub>ID: toki-plus (Note: "GitHub Customization")</sub>
+      <sub>ID: toki-plus (Note: "GitHub")</sub>
     </td>
     <td align="center">
       <img src="./assets/images/gzh.png" alt="Public Account QR Code" width="200"/>
@@ -195,6 +169,7 @@ If you find this project helpful, please consider giving it a ⭐!
 
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
 
 
 
