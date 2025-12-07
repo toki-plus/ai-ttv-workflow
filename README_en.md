@@ -140,7 +140,7 @@ The application's top-to-bottom layout represents the recommended workflow.
       <br />
       <sub><b>WeChat</b></sub>
       <br />
-      <sub>ID: toki-plus (Note: "GitHub")</sub>
+      <sub>ID: toki-plus (Note: "GitHub Customization")</sub>
     </td>
     <td align="center">
       <img src="./assets/images/gzh.png" alt="Public Account QR Code" width="200"/>
@@ -169,6 +169,7 @@ If you find this project helpful, please consider giving it a ⭐!
 
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
 
 
 
