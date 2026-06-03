@@ -1,4 +1,4 @@
-# AI-TTV-Workflow: An AI-Powered Text-to-Video Creation Workflow
+﻿# AI-TTV-Workflow: An AI-Powered Text-to-Video Creation Workflow
 
 [简体中文](./README.md) | [English](./README_en.md)
 
@@ -140,7 +140,9 @@ The application's top-to-bottom layout represents the recommended workflow.
       <br />
       <sub><b>WeChat</b></sub>
       <br />
-      <sub>ID: toki-plus</sub>
+      <sub>WeChat ID: toki-plus</sub>
+      <br />
+      <sub>(Please include your purpose when adding me)</sub>
     </td>
     <td align="center">
       <img src="./assets/images/gzh.png" alt="Public Account QR Code" width="200"/>
@@ -154,14 +156,16 @@ The application's top-to-bottom layout represents the recommended workflow.
 
 ## 📂 My Other Open-Source Projects
 
+-   **[AI-Trader-For-MT5](https://github.com/toki-plus/ai-trader-for-mt5)**: An AI trading assistant and EA engineering framework for MetaTrader 5, combining MQL5, Python, MCP-style tool services, risk modules, and private custom development.
 -   **[Netease Downloader](https://github.com/toki-plus/netease-downloader)**: An elegant, feature-rich desktop application for downloading high-quality and lossless music from Netease Cloud Music, with support for playlists, albums, QR login, and automatic metadata tagging.
--   **[AI-Trader-For-MT4](https://github.com/toki-plus/ai-trader-for-mt4)**: A revolutionary open-source framework that transforms a Large Language Model (LLM) into an autonomous trading agent for the MetaTrader 4 (MT4) platform.
--   **[Auto USPS Tracker](https://github.com/toki-plus/auto-usps-tracker)**: An efficient USPS bulk package tracker for e-commerce sellers, featuring anti-blocking scraping and formatted Excel report generation.
--   **[AI Mixed Cut](https://github.com/toki-plus/ai-mixed-cut)**: A groundbreaking AI content re-creation engine that deconstructs viral videos into a creative library and automatically generates new, original videos using a "Deconstruct-Reconstruct" model.
--   **[AI Video Workflow](https://github.com/toki-plus/ai-video-workflow)**: A fully automated AI-native video generation pipeline, integrating Text-to-Image, Image-to-Video, and Text-to-Music models to create AIGC short videos with one click.
--   **[AI Highlight Clip](https://github.com/toki-plus/ai-highlight-clip)**: An AI-driven tool that automatically discovers, analyzes, and clips "highlight moments" from long-form videos, complete with auto-generated viral titles.
--   **[AB Video Deduplicator](https://github.com/toki-plus/AB-Video-Deduplicator)**: Fundamentally alters a video's data fingerprint using an innovative "high-frame-rate blending" technique to bypass originality checks on major short-video platforms.
--   **[Video Mover](https://github.com/toki-plus/video-mover)**: A powerful, fully automated pipeline that monitors creators, downloads their new videos, performs deep deduplication, generates AI-powered titles, and auto-publishes to different platforms.
+-   **[AI-Trader-For-MT4](https://github.com/toki-plus/ai-trader-for-mt4)**: An LLM-driven autonomous MT4 trading robot framework that turns large language models into AI trading agents capable of sensing, reasoning, and acting on MetaTrader 4.
+-   **[Auto USPS Tracker](https://github.com/toki-plus/auto-usps-tracker)**: A batch USPS logistics tracker designed for cross-border e-commerce sellers, supporting batch tracking and Excel report generation.
+-   **[AI Mixed Cut](https://github.com/toki-plus/ai-mixed-cut)**: An AI content re-creation and mixed-cut tool that deconstructs existing videos into creative assets and automatically generates new short-form videos.
+-   **[AI Video Workflow](https://github.com/toki-plus/ai-video-workflow)**: A fully automated AI-native video generation workflow integrating text-to-image, image-to-video, and text-to-music models for one-click AIGC short video creation.
+-   **[AI Highlight Clip](https://github.com/toki-plus/ai-highlight-clip)**: An AI-powered intelligent clipping tool that automatically analyzes long videos and extracts highlight clips for short-form content distribution.
+-   **[AB Video Deduplicator](https://github.com/toki-plus/AB-Video-Deduplicator)**: A video deduplication and fingerprint-reconstruction tool that changes video data characteristics through high-frame-rate frame sampling and blending.
+-   **[Video Mover](https://github.com/toki-plus/video-mover)**: An automated content creation pipeline for video monitoring, downloading, multi-dimensional processing, AI title generation, and multi-platform publishing.
+
 
 ## 🤝 Contributing
 
@@ -175,4 +179,9 @@ If you find this project helpful, please consider giving it a ⭐!
 
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+
+
+
+
 
