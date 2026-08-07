@@ -1,192 +1,85 @@
-﻿# AI-TTV-Workflow: AI驱动的文本转视频创作工作流
+# AI TTV Workflow
 
-[简体中文](./README.md) | [English](./README_en.md)
+面向内容团队的文本到视频生产工作流原型。
 
-[![GitHub stars](https://img.shields.io/github/stars/toki-plus/ai-ttv-workflow?style=social)](https://github.com/toki-plus/ai-ttv-workflow/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/toki-plus/ai-ttv-workflow?style=social)](https://github.com/toki-plus/ai-ttv-workflow/network/members)
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/toki-plus/ai-ttv-workflow/pulls)
+项目将文案处理、语音合成、字幕生成、画面配置和视频渲染整合在一个桌面应用中，用于验证如何减少短视频生产中的重复操作，同时保留人工编辑和确认环节。
 
-**AI-TTV-Workflow 是一款免费、开源的桌面应用程序，旨在全自动地将文本内容转化为引人入胜的短视频。**
+## 项目背景
 
-本项目专为内容创作者、新媒体运营及开发者设计，致力于简化视频制作流程。无论是文章、脚本，甚至是已有的视频文案，都能被快速转换成可直接发布的短视频，适用于抖音、B站、YouTube Shorts、小红书等平台。
+将一段文案制作成可发布视频，通常需要在多个工具之间反复传递文本、音频、字幕和素材。流程割裂会增加文件管理成本，也容易造成内容版本不一致。
 
-<p align="center">
-  <a href="https://www.bilibili.com/video/BV1mzhXzsEJ1" target="_blank">
-    <img src="./assets/images/cover_demo.png" alt="点击观看B站演示视频" width="800"/>
-  </a>
-  <br>
-  <em>(点击封面图跳转到 B 站观看高清演示视频)</em>
-</p>
+AI TTV Workflow 将这些步骤组织成可视化流水线，使用户能够在同一个界面中完成输入、编辑、生成与预览。
 
----
+## 目标用户
 
-## ✨ 核心功能
+- 需要批量制作知识类或口播类内容的运营团队
+- 希望验证文本转视频流程的产品与技术人员
+- 需要可重复字幕、配音和封面配置的内容创作者
 
-这不仅仅是一个视频剪辑工具，而是一个完整的智能化工作流：
+## 主要能力
 
--   **🤖 AI驱动的内容引擎**:
-    -   **一键提取文案**: 只需粘贴抖音视频分享链接，即可自动提取完整的视频文案。
-    -   **AI一键二创**: 对现有文案进行深度去重和二次创作，一键生成原创内容。
-    -   **AI一键翻译**: 将文案翻译成数十种语言，轻松实现内容的全球化分发。
-    -   **智能生成标题**: 根据文案内容，自动为视频封面生成吸引人的主标题和副标题。
+- 接收手动输入的文案或提取后的文本
+- 提供 AI 辅助改写与翻译入口
+- 使用 Edge TTS 生成语音
+- 生成与音频匹配的 SRT 字幕
+- 配置头像、字体、作者信息、背景音乐与视频参数
+- 使用 FFmpeg 完成音视频合成和封面生成
+- 在桌面界面中预览结果并管理任务状态
 
--   **🎙️ 先进的文本转语音 (TTS)**:
-    -   **高品质人声**: 集成微软Edge TTS (`edge-tts`) 引擎，提供覆盖多语言、多性别的自然流畅人声。
-    -   **参数精细调校**: 支持对语速、音调、音量进行微调，以匹配视频的情感基调。
-    -   **自动生成字幕**: 在生成音频的同时，完美同步生成 `.srt` 格式的字幕文件。
+## 工作流
 
--   **🎬 视频与封面自动化生成**:
-    -   **FFmpeg强力驱动**: 基于强大的 FFmpeg 进行视频处理，稳定高效。
-    -   **动态字幕嵌入**: 将字幕文件自动嵌入视频，并支持自定义字体。
-    -   **个性化品牌设置**: 轻松添加自定义的圆形头像、作者名称和背景音乐 (BGM)。
-    -   **专业级封面图**: 自动生成适用于短视频平台的竖屏封面图 (9:16)。
-    -   **🚀 GPU加速支持**: 支持NVIDIA显卡 (NVENC) 加速，大幅缩短视频渲染时间。
+```text
+Text input
+    -> Review and editing
+    -> Speech synthesis
+    -> Subtitle generation
+    -> Visual configuration
+    -> FFmpeg rendering
+    -> Preview and export
+```
 
--   **GUI与用户体验**:
-    -   **跨平台图形界面**: 基于 PyQt5 构建，在 Windows、macOS 和 Linux 上均提供简洁直观的操作体验。
-    -   **驱动自动管理**: 首次使用AI功能时，程序会自动下载匹配当前Chrome版本的驱动程序，免去繁琐配置。
+## 代码结构
 
-## 📸 软件截图
+- `core/app_controller.py`：应用流程编排
+- `core/services/`：文本、语音和视频服务
+- `core/ui/`：桌面界面与预览组件
+- `core/utils/`：任务进程、数据与驱动管理
+- `main.py`：应用入口
 
-<p align="center">
-  <img src="./assets/images/cover_software.png" alt="软件主界面" width="800"/>
-  <br>
-  <em>软件主界面，所有工作流步骤一目了然。</em>
-</p>
+主要技术：Python、PyQt5、Edge TTS、Selenium、FFmpeg、Pillow。
 
-<p align="center">
-  <img src="./assets/images/cover_video.jpg" alt="生成的封面" width="300"/>
-  <br>
-  <em>自动生成的视频封面图示例。</em>
-</p>
+## 快速开始
 
-## 🚀 快速开始
+### 环境要求
 
-### 系统要求
+- Python 3.8+
+- FFmpeg（需加入 `PATH`）
+- Google Chrome（仅在启用浏览器辅助功能时需要）
 
-1.  **Python**: 3.8 或更高版本。
-2.  **FFmpeg**: **必须**安装 FFmpeg 并将其添加到系统环境变量中。
-    -   请访问 [FFmpeg 官网](https://ffmpeg.org/download.html) 查看安装教程。
-    -   检查是否安装成功：打开终端或命令提示符，输入 `ffmpeg -version`，如果能看到版本信息则表示安装成功。
-3.  **Google Chrome 浏览器**: 使用AI功能需要。
+```bash
+git clone https://github.com/toki-plus/ai-ttv-workflow.git
+cd ai-ttv-workflow
+python -m venv venv
+```
 
-### 安装与启动
+激活虚拟环境后：
 
-1.  **克隆本仓库：**
-    ```bash
-    git clone https://github.com/toki-plus/ai-ttv-workflow.git
-    cd ai-ttv-workflow
-    ```
+```bash
+pip install -r requirements.txt
+python main.py
+```
 
-2.  **创建并激活虚拟环境 (推荐)：**
-    ```bash
-    python -m venv venv
-    # Windows 系统
-    venv\Scripts\activate
-    # macOS/Linux 系统
-    source venv/bin/activate
-    ```
+## 使用边界
 
-3.  **安装依赖库：**
-    ```bash
-    pip install -r requirements.txt
-    ```
+- AI 生成或改写的内容应由用户审核后再发布。
+- 浏览器自动化依赖第三方页面结构，页面变更可能影响相关功能。
+- 用户应确保输入文本、音视频素材和发布内容拥有合法使用权。
+- 当前版本尚未建立完整的自动化测试与 CI。
 
-4.  **运行程序：**
-    ```bash
-    python main.py
-    ```
-    当你首次使用AI相关功能时，程序会自动为你下载匹配的 `chromedriver`。
+## 项目价值
 
-## 📖 使用指南
+本项目展示了对内容生产流程的拆解、服务模块边界设计，以及将人工确认点保留在自动化流程中的产品思考。
 
-软件界面从上到下的布局即是推荐的工作流程。
+## License
 
-1.  **第一步：获取文案 (可选)**
-    -   首次使用AI功能时，请先点击 **“登录豆包”**。在弹出的浏览器中完成登录（如扫码），然后 **手动关闭该浏览器窗口**。登录状态会被保存，后续无需重复操作。
-    -   在输入框中粘贴抖音视频链接，点击 **“提取文案”**，软件将自动填充文案和推荐的封面标题。
-    -   你也可以直接在文本框中手动输入或粘贴你的文案。
-
-2.  **第二步：编辑和润色文案**
-    -   手动修改文本内容。
-    -   使用 **“一键原创”** 或 **“一键翻译”** 功能，让AI对你的文案进行再加工。
-
-3.  **第三、四步：选择声音并调整参数**
-    -   根据需求选择语言、性别和具体的发音人。
-    -   通过拖动滑块来调整语速、音量和音调。
-
-4.  **第五步：生成音频和字幕**
-    -   选择一个用于保存文件的输出目录。
-    -   勾选“生成字幕”（强烈推荐）。
-    -   点击 **“生成音频”**。一个 `.mp3` 音频文件和一个 `.srt` 字幕文件将被创建。
-
-5.  **第六步：配置并生成视频**
-    -   音频和字幕文件的路径会被自动填充。
-    -   配置视频的各项参数：选择你的头像图片、字体文件、设置作者名称等。
-    -   （可选）添加背景音乐 (BGM)。
-    -   如果你的电脑有NVIDIA显卡，可以勾选“开启GPU加速”。
-    -   点击 **“生成视频”**！稍等片刻，最终的 `.mp4` 视频和封面图就会出现在你的输出目录中。
-
----
-
-<p align="center">
-  <strong>技术交流，请添加：</strong>
-</p>
-<table align="center">
-  <tr>
-    <td align="center">
-      <img src="./assets/images/wechat.png" alt="微信二维码" width="200"/>
-      <br />
-      <sub><b>个人微信</b></sub>
-      <br />
-      <sub>微信号: toki-plus</sub>
-      <br />
-      <sub>（请备注来意，否则不通过）</sub>
-    </td>
-    <td align="center">
-      <img src="./assets/images/gzh.png" alt="公众号二维码" width="200"/>
-      <br />
-      <sub><b>公众号</b></sub>
-      <br />
-      <sub>获取最新技术分享与项目更新</sub>
-    </td>
-  </tr>
-</table>
-
-## 📂 我的其他开源项目
-
--   **[AI-Trader-For-MT5](https://github.com/toki-plus/ai-trader-for-mt5)**: 面向 MetaTrader 5 的 AI 交易助手与 EA 工程化框架，支持 MQL5、Python、MCP 工具服务、风控模块和私有化定制开发。
--   **[Netease Downloader](https://github.com/toki-plus/netease-downloader)**: 一款优雅、功能丰富的网易云音乐下载器，支持无损/高品质音质、歌单/专辑批量下载、扫码登录和自动写入ID3元数据。
--   **[AI-Trader-For-MT4](https://github.com/toki-plus/ai-trader-for-mt4)**: LLM驱动的自主型MT4交易机器人框架，将大语言模型转变为能够在 MetaTrader 4 平台上进行“感知-思考-行动”的 AI 交易代理。
--   **[Auto USPS Tracker](https://github.com/toki-plus/auto-usps-tracker)**: 专为跨境电商卖家设计的 USPS 批量物流追踪器，支持批量查询并生成 Excel 报告。
--   **[AI Mixed Cut](https://github.com/toki-plus/ai-mixed-cut)**: AI 内容重构与混剪工具，通过“解构-重构”模式将现有视频解析为创作素材，并自动生成新的短视频内容。
--   **[AI Video Workflow](https://github.com/toki-plus/ai-video-workflow)**: 全自动 AI 原生视频生成工作流，集成文生图、图生视频和文生音乐模型，一键创作 AIGC 短视频。
--   **[AI Highlight Clip](https://github.com/toki-plus/ai-highlight-clip)**: AI 驱动的智能剪辑工具，自动从长视频中分析并提取高光片段，生成适合分发的短视频内容。
--   **[AB Video Deduplicator](https://github.com/toki-plus/AB-Video-Deduplicator)**: 视频去重与指纹重构工具，通过高帧率抽帧混合等方式改变视频数据特征。
--   **[Video Mover](https://github.com/toki-plus/video-mover)**: 全自动内容创作流水线，支持视频监听下载、多维度处理、AI 标题生成和多平台发布。
-
-
-## 🤝 参与贡献
-
-欢迎任何形式的贡献！如果你有新的功能点子、发现了Bug，或者有任何改进建议，请：
--   提交一个 [Issue](https://github.com/toki-plus/ai-ttv-workflow/issues) 进行讨论。
--   Fork 本仓库并提交 [Pull Request](https://github.com/toki-plus/ai-ttv-workflow/pulls)。
-
-如果这个项目对你有帮助，请不吝点亮一颗 ⭐！
-
-## 📜 开源协议
-
-
-本项目基于 MIT 协议开源。详情请见 [LICENSE](LICENSE) 文件。
-
-
-
-
-
-
-
-
-
-
-
+See [LICENSE](./LICENSE).

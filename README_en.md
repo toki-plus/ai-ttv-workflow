@@ -1,187 +1,85 @@
-﻿# AI-TTV-Workflow: An AI-Powered Text-to-Video Creation Workflow
+# AI TTV Workflow
 
-[简体中文](./README.md) | [English](./README_en.md)
+A text-to-video workflow prototype for content operations teams.
 
-[![GitHub stars](https://img.shields.io/github/stars/toki-plus/ai-ttv-workflow?style=social)](https://github.com/toki-plus/ai-ttv-workflow/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/toki-plus/ai-ttv-workflow?style=social)](https://github.com/toki-plus/ai-ttv-workflow/network/members)
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/toki-plus/ai-ttv-workflow/pulls)
+The project combines copy preparation, speech synthesis, subtitle generation, visual configuration, and video rendering in a desktop application. It explores how repetitive production steps can be reduced while keeping human review and approval in the process.
 
-**AI-TTV-Workflow is a free, open-source desktop application designed to automatically transform text content into engaging short videos.**
+## Context
 
-This project is built for content creators, social media managers, and developers looking to streamline their video production pipeline. Turn articles, scripts, or even existing video transcripts into ready-to-publish short videos for platforms like TikTok, YouTube Shorts, Instagram Reels, and more.
+Producing a video from a written script often requires moving text, audio, subtitles, and assets across several tools. The fragmented workflow increases file-management overhead and creates inconsistent content versions.
 
-<p align="center">
-  <a href="https://www.bilibili.com/video/BV1mzhXzsEJ1" target="_blank">
-    <img src="./assets/images/cover_demo.png" alt="Click to watch the demo video on Bilibili" width="800"/>
-  </a>
-  <br>
-  <em>(Click the cover to watch the HD demo video on Bilibili)</em>
-</p>
+AI TTV Workflow organizes these steps into a visual pipeline for input, editing, generation, and preview.
 
----
+## Intended Users
 
-## ✨ Core Features
+- Operations teams producing knowledge or presenter-style videos
+- Product and technical teams validating text-to-video workflows
+- Creators who need repeatable voice, subtitle, cover, and layout settings
 
-This is more than just a video editor; it's a complete, intelligent workflow:
+## Capabilities
 
--   **🤖 AI-Powered Content Engine**:
-    -   **One-Click Script Extraction**: Simply paste a Douyin (China's TikTok) share link to automatically extract the full video script.
-    -   **AI-Powered Rewrite**: Perform deep paraphrasing and rewriting on existing text to generate unique, original content with a single click.
-    -   **AI-Powered Translation**: Translate scripts into dozens of languages to effortlessly globalize your content.
-    -   **Intelligent Title Generation**: Automatically creates catchy main titles and subtitles for your video cover based on the script's content.
+- Accept manually entered or extracted text
+- Provide AI-assisted rewriting and translation entry points
+- Generate speech with Edge TTS
+- Create SRT subtitles aligned with the generated audio
+- Configure avatars, fonts, author information, background music, and video parameters
+- Render audio, video, subtitles, and covers with FFmpeg
+- Preview results and monitor task state in a desktop interface
 
--   **🎙️ Advanced Text-to-Speech (TTS)**:
-    -   **High-Quality Voices**: Integrates with the Microsoft Edge TTS (`edge-tts`) engine, offering natural and fluent voices across multiple languages and genders.
-    -   **Fine-Tuned Control**: Allows for precise adjustments of speech rate, pitch, and volume to match the emotional tone of your video.
-    -   **Automatic Subtitle Generation**: Perfectly synchronized `.srt` subtitle files are generated alongside the audio.
+## Workflow
 
--   **🎬 Automated Video & Cover Synthesis**:
-    -   **Powered by FFmpeg**: Utilizes the robust and efficient FFmpeg library for all video processing tasks.
-    -   **Dynamic Subtitle Embedding**: Automatically burns subtitles into the video with support for custom fonts.
-    -   **Personalized Branding**: Easily add a custom circular avatar, author name, and background music (BGM).
-    -   **Professional Cover Art**: Automatically generates a 9:16 vertical cover image suitable for short-form video platforms.
-    -   **🚀 GPU Acceleration**: Supports NVIDIA (NVENC) hardware acceleration to dramatically reduce video rendering times.
+```text
+Text input
+    -> Review and editing
+    -> Speech synthesis
+    -> Subtitle generation
+    -> Visual configuration
+    -> FFmpeg rendering
+    -> Preview and export
+```
 
--   **GUI & User Experience**:
-    -   **Cross-Platform Interface**: Built with PyQt5, offering a clean and intuitive user experience on Windows, macOS, and Linux.
-    -   **Automatic Driver Management**: On the first use of AI features, the application automatically downloads the correct `chromedriver` to match your version of Chrome, eliminating manual setup.
+## Code Structure
 
-## 📸 Screenshots
+- `core/app_controller.py`: application orchestration
+- `core/services/`: text, speech, and video services
+- `core/ui/`: desktop interface and preview components
+- `core/utils/`: process, data, and driver management
+- `main.py`: application entry point
 
-<p align="center">
-  <img src="./assets/images/cover_software.png" alt="Main UI" width="800"/>
-  <br>
-  <em>The main interface, where every step of the workflow is clearly laid out.</em>
-</p>
+Core technologies: Python, PyQt5, Edge TTS, Selenium, FFmpeg, and Pillow.
 
-<p align="center">
-  <img src="./assets/images/cover_video.jpg" alt="Generated Cover" width="300"/>
-  <br>
-  <em>An example of an automatically generated video cover.</em>
-</p>
+## Quick Start
 
-## 🚀 Quick Start
+### Requirements
 
-### System Requirements
+- Python 3.8+
+- FFmpeg available on `PATH`
+- Google Chrome when browser-assisted features are enabled
 
-1.  **Python**: Version 3.8 or newer.
-2.  **FFmpeg**: You **must** have FFmpeg installed and added to your system's PATH.
-    -   Visit the [FFmpeg official website](https://ffmpeg.org/download.html) for installation instructions.
-    -   To check if it's installed correctly, open a terminal or command prompt and run `ffmpeg -version`. You should see version information printed.
-3.  **Google Chrome**: Required for the AI-powered features.
+```bash
+git clone https://github.com/toki-plus/ai-ttv-workflow.git
+cd ai-ttv-workflow
+python -m venv venv
+```
 
-### Installation & Launch
+After activating the virtual environment:
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/toki-plus/ai-ttv-workflow.git
-    cd ai-ttv-workflow
-    ```
+```bash
+pip install -r requirements.txt
+python main.py
+```
 
-2.  **Create and activate a virtual environment (recommended):**
-    ```bash
-    python -m venv venv
-    # On Windows
-    venv\Scripts\activate
-    # On macOS/Linux
-    source venv/bin/activate
-    ```
+## Responsible Use and Limitations
 
-3.  **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
+- AI-generated or rewritten content should be reviewed before publication.
+- Browser automation depends on third-party page structures and may require maintenance.
+- Users must have appropriate rights to all text, audio, video, and other media used in the workflow.
+- The current version does not include comprehensive automated tests or CI.
 
-4.  **Run the application:**
-    ```bash
-    python main.py
-    ```
-    The first time you use an AI-related feature, the application will automatically download the matching `chromedriver` for you.
+## What This Project Demonstrates
 
-## 📖 Usage Guide
+The project demonstrates workflow decomposition, service boundaries, and a human-in-the-loop approach to content automation.
 
-The application's top-to-bottom layout represents the recommended workflow.
+## License
 
-1.  **Step 1: Get Your Script (Optional)**
-    -   Before using AI features for the first time, click **"登录豆包" (Login Doubao)**. Log in within the browser window that appears (e.g., by scanning the QR code), and then **manually close the browser window**. Your session will be saved for future use.
-    -   Paste a Douyin video link and click **"提取文案" (Extract Script)**. The script and recommended cover titles will be auto-filled.
-    -   Alternatively, you can type or paste your own script directly into the text box.
-
-2.  **Step 2: Edit and Refine Your Script**
-    -   Manually edit the text as needed.
-    -   Use the **"一键原创" (Rewrite)** or **"一键翻译" (Translate)** buttons to have the AI process your script further.
-
-3.  **Steps 3 & 4: Select a Voice and Adjust Parameters**
-    -   Choose a language, gender, and specific voice from the dropdown menus.
-    -   Use the sliders to fine-tune the speech rate, volume, and pitch.
-
-4.  **Step 5: Generate Audio and Subtitles**
-    -   Select an output directory for your files.
-    -   Check the "Generate Subtitles" box (highly recommended).
-    -   Click **"生成音频" (Generate Audio)**. An `.mp3` audio file and an `.srt` subtitle file will be created.
-
-5.  **Step 6: Configure and Generate the Video**
-    -   The paths for the audio and subtitle files will be filled automatically.
-    -   Configure your video's parameters: select an avatar image, a font file, set the author name, etc.
-    -   (Optional) Add background music (BGM).
-    -   If you have a supported NVIDIA GPU, check "Enable GPU Acceleration".
-    -   Click **"生成视频" (Generate Video)**! After a short wait, your final `.mp4` video and cover image will be ready in your output directory.
-
----
-
-<p align="center">
-  <strong>For technical inquiries, please connect via:</strong>
-</p>
-<table align="center">
-  <tr>
-    <td align="center">
-      <img src="./assets/images/wechat.png" alt="WeChat QR Code" width="200"/>
-      <br />
-      <sub><b>WeChat</b></sub>
-      <br />
-      <sub>WeChat ID: toki-plus</sub>
-      <br />
-      <sub>(Please include your purpose when adding me)</sub>
-    </td>
-    <td align="center">
-      <img src="./assets/images/gzh.png" alt="Public Account QR Code" width="200"/>
-      <br />
-      <sub><b>Public Account</b></sub>
-      <br />
-      <sub>Scan for tech articles & project updates</sub>
-    </td>
-  </tr>
-</table>
-
-## 📂 My Other Open-Source Projects
-
--   **[AI-Trader-For-MT5](https://github.com/toki-plus/ai-trader-for-mt5)**: An AI trading assistant and EA engineering framework for MetaTrader 5, combining MQL5, Python, MCP-style tool services, risk modules, and private custom development.
--   **[Netease Downloader](https://github.com/toki-plus/netease-downloader)**: An elegant, feature-rich desktop application for downloading high-quality and lossless music from Netease Cloud Music, with support for playlists, albums, QR login, and automatic metadata tagging.
--   **[AI-Trader-For-MT4](https://github.com/toki-plus/ai-trader-for-mt4)**: An LLM-driven autonomous MT4 trading robot framework that turns large language models into AI trading agents capable of sensing, reasoning, and acting on MetaTrader 4.
--   **[Auto USPS Tracker](https://github.com/toki-plus/auto-usps-tracker)**: A batch USPS logistics tracker designed for cross-border e-commerce sellers, supporting batch tracking and Excel report generation.
--   **[AI Mixed Cut](https://github.com/toki-plus/ai-mixed-cut)**: An AI content re-creation and mixed-cut tool that deconstructs existing videos into creative assets and automatically generates new short-form videos.
--   **[AI Video Workflow](https://github.com/toki-plus/ai-video-workflow)**: A fully automated AI-native video generation workflow integrating text-to-image, image-to-video, and text-to-music models for one-click AIGC short video creation.
--   **[AI Highlight Clip](https://github.com/toki-plus/ai-highlight-clip)**: An AI-powered intelligent clipping tool that automatically analyzes long videos and extracts highlight clips for short-form content distribution.
--   **[AB Video Deduplicator](https://github.com/toki-plus/AB-Video-Deduplicator)**: A video deduplication and fingerprint-reconstruction tool that changes video data characteristics through high-frame-rate frame sampling and blending.
--   **[Video Mover](https://github.com/toki-plus/video-mover)**: An automated content creation pipeline for video monitoring, downloading, multi-dimensional processing, AI title generation, and multi-platform publishing.
-
-
-## 🤝 Contributing
-
-Contributions of any kind are welcome! If you have ideas for new features, have found a bug, or have suggestions for improvements, please:
--   Open an [Issue](https://github.com/toki-plus/ai-ttv-workflow/issues) to start a discussion.
--   Fork the repository and submit a [Pull Request](https://github.com/toki-plus/ai-ttv-workflow/pulls).
-
-If you find this project helpful, please consider giving it a ⭐!
-
-## 📜 License
-
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-
-
-
-
-
+See [LICENSE](./LICENSE).
